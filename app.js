@@ -1,5 +1,15 @@
 let panel = document.querySelector("#panel");
 let btnRight = document.querySelector("#btnRight");
+let html = document.querySelector("html");
+let mouseDown = false;
+
+document.addEventListener("mousedown", () => {
+	mouseDown = true;
+})
+document.addEventListener("mouseup", () => {
+	mouseDown = false;
+})
+
 
 function addPixels(rowSize) {
 	for (let i = 0; i < rowSize; i++) {
@@ -13,8 +23,10 @@ function addPixels(rowSize) {
 			pixelRow.append(pixel);
 			pixel.classList.add("pixel");
 			pixel.style.flex = "1 1 0";
-			pixel.addEventListener("mouseover", () => {
-				pixel.style.backgroundColor = "black";
+			pixel.addEventListener("mouseenter", () => {
+				if (mouseDown === true) {
+					pixel.style.backgroundColor = "black";
+				}
 			});
 			btnRight.addEventListener("click", () => {
 				pixel.style.backgroundColor = "initial";
@@ -23,4 +35,4 @@ function addPixels(rowSize) {
 	}
 }
 
-addPixels(80);
+addPixels(64);
