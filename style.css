@@ -101,6 +101,8 @@ main {
 	background-color: var(--color-3-2);
 	border-radius: 1rem;
 	box-shadow: inset 0px 0px 8px var(--color-3-9);
+	display: flex;
+	flex-direction: column;
 }
 
 
@@ -131,4 +133,7 @@ footer {
 	border-radius: 100%;
 	border: 2px solid var(--color-3-3);
 	box-shadow: -8px 8px 25px var(--color-3-9), inset -3px 3px 25px var(--color-3-9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
