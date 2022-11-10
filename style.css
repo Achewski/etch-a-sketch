@@ -57,10 +57,11 @@ html{
 }
 body {
 	flex: 1;
-	height: 90vh;
+	height: 95vh;
 	max-width: 1200px;
 	background-color: var(--color-1-5);
-	border-radius: 1rem;
+	border-radius: 1.2rem;
+	box-shadow: inset 0px 0px 1rem var(--color-3-9);
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
@@ -75,15 +76,15 @@ header {
 	align-items: center;
 	column-gap: 1.5rem;
 }
-#logo2 {
+#headerMiddle {
 	font-family: "Rondo", sans-serif;
 	font-size: 4rem;
 	font-weight: 900;
 	color: var(--color-2-5);
 	text-align: center;
 }
-#logo1, #logo3 {
-	font-family: "Retrochips";
+#headerLeft, #headerRight {
+	font-family: "Retrochips", sans-serif;
 	font-size: 1.5rem;
 	color: var(--color-2-5);
 	text-align: center;
@@ -103,8 +104,8 @@ main {
 	width: 100%;
 	max-width: 800px;
 	background-color: var(--color-3-2);
-	border-radius: 1rem;
-	box-shadow: inset 0px 0px 5px var(--color-3-9);
+	border-radius: 1.2rem;
+	box-shadow: 0px 0px 0.5rem var(--color-3-9), inset 0px 0px 5px var(--color-3-9);
 	display: flex;
 	flex-direction: column;
 	padding: 0.5rem;
@@ -126,7 +127,7 @@ footer {
 	max-width: 10rem;
 	background-color: var(--color-3-1);
 	border-radius: 100%;
-	box-shadow: -5px 5px 30px 5px hsla(0, 0%, 0%, 50%);
+	box-shadow: -5px 5px 30px var(--color-3-9), inset 3px -3px 50px var(--color-3-3);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -135,9 +136,51 @@ footer {
 	height: 80%;
 	width: 80%;
 	border-radius: 100%;
-	border: 2px solid var(--color-3-3);
-	box-shadow: -8px 8px 25px var(--color-3-9), inset -3px 3px 25px var(--color-3-9);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+#footerMiddle {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+}
+#slider {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: var(--color-3-1);
+	border-radius: 0.1rem;
+	box-shadow: inset 0px 0px 0.2rem var(--color-3-9);
+	width: 100%;
+	height: 0.8rem;
+	direction: rtl; /* Make pixel size go from small to large */
+}
+#slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 2rem;
+	height: 2rem;
+	background-color: var(--color-2-5);
+	border-radius: 0.1rem;
+	box-shadow: 0px 0px 0.2rem var(--color-3-9), inset 0px 0px 0.2rem var(--color-3-9);
+	cursor: pointer;
+}
+#slider::-moz-range-thumb {
+	width: 2rem;
+	height: 2rem;
+	background-color: var(--color-2-5);
+	border: none;
+	border-radius: 0.1rem;
+	box-shadow: 0px 0px 0.2rem var(--color-3-9), inset 0px 0px 0.2rem var(--color-3-9);
+	cursor: pointer;
+}
+#pixelSize {
+	font-family: "Retrochips", sans-serif;
+	font-size: 1.5rem;
+	color: var(--color-2-5);
+	text-align: center;
 }

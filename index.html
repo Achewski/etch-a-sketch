@@ -9,24 +9,28 @@
 	</head>
 		<body>
 			<header>
-				<h1 id="logo1">MAGIC</h1>
-				<h1 id="logo2">Etch A Sketch</h1>
-				<h1 id="logo3">SCREEN</h1>
+				<h1 id="headerLeft">MAGIC</h1>
+				<h1 id="headerMiddle">Etch A Sketch</h1>
+				<h1 id="headerRight">SCREEN</h1>
 			</header>
 			
 			
 			
 			
-			<main>
-				<div id="panel" onmousedown="return false"></div>
+			<main onmousedown="return false">
+				<div id="panel"></div>
 			</main>
 			
 			
 			
 			
 			<footer>
-					<button id="btnLeft"><div class="btnCenter"></div></button>
-					<button id="btnRight"><div class="btnCenter">RESET</div></button>
+					<div id="btnLeft"><button class="btnCenter">ERASER ON/OFF</button></div>
+					<div id="footerMiddle">
+						<input id="slider" type="range" min="10" max="30" value="20">
+						<h2 id="pixelSize">PIXEL SIZE</h2>
+					</div>
+					<div id="btnRight"><button class="btnCenter">CLEAR</button></div>
 			</footer>
 			<script id="appJS" src="app.js"></script>
 	</body>
